@@ -1,104 +1,304 @@
 <!doctype html>
-<html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8">
-    <meta name="author" content="zhenqing li">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Zhenqing(ZQ) Li's Homepage</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Zhenqing Li">
+    <title>Zhenqing (ZQ) Li</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div class="wrapper">
-      <header class="without-description">
-        <h1>Zhenqing(ZQ) Li <br> <small>Data Science, Programing, Polymer Science etc.</small></h1>
-        <ul>
-	  <!-- Remove these comments when blogs are ready! -->
-	  <li class="double"><a href="files/Zhenqing_Li.pdf"><strong>Resume</strong></a></li>
-	  <li class="double"><a href="https://digitalpig.github.io/blog"><strong>Blog</strong></a></li> 
-	  <li class="double"><a href="https://digitalpig.github.io/zh-blog"><strong> 
-	              中文博客</strong></a></li>
+  <body class="bg-white text-gray-800 font-sans antialiased">
 
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a id="welcome" class="anchor" href="#welcomes"
-   aria-hidden="true"><span aria-hidden="true" class="octicon
-						      octicon-link"></span></a>Welcome
-   to my homepage</h3>
+    <!-- Nav -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <div class="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between">
+        <span class="font-semibold text-gray-900 tracking-tight">ZQ Li</span>
+        <div class="flex items-center gap-1 text-sm">
+          <a href="#about"      class="px-3 py-1.5 text-gray-500 hover:text-gray-900 rounded-md hover:bg-gray-100 transition">About</a>
+          <a href="#experience" class="px-3 py-1.5 text-gray-500 hover:text-gray-900 rounded-md hover:bg-gray-100 transition">Experience</a>
+          <a href="#projects"   class="px-3 py-1.5 text-gray-500 hover:text-gray-900 rounded-md hover:bg-gray-100 transition">Projects</a>
+          <a href="files/Zhenqing_Li.pdf" class="ml-2 px-3 py-1.5 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition font-medium">Resume</a>
+        </div>
+      </div>
+    </nav>
 
-<p>This webpage is to host some of my thoughts about data science, programming
-  and polymer science. If you are interested, you can further go to
-  my <a href="digitalpig.github.io/blog">Blog</a> to take a look. I also host a
-  <a href="digitalpig.github.io/zh-blog">Chinese version</a> of my blog as well.</p>
+    <!-- Hero -->
+    <header class="max-w-4xl mx-auto px-6 pt-16 pb-12">
+      <p class="text-sm font-medium text-indigo-600 tracking-wide uppercase mb-3">Currently at Shopify</p>
+      <h1 class="text-5xl font-bold text-gray-900 tracking-tight leading-tight">Zhenqing (ZQ) Li</h1>
+      <p class="mt-3 text-xl text-gray-500 font-medium">Senior Applied Machine Learning Engineer</p>
+      <p class="mt-4 text-gray-600 max-w-2xl leading-relaxed">
+        ML engineer and data scientist building LLM-powered search at Shopify. Background spanning a decade in fintech and materials science research.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3 text-sm">
+        <a href="https://github.com/digitalpig"
+           class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:border-gray-400 hover:text-gray-900 transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/zhenqingli"
+           class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:border-gray-400 hover:text-gray-900 transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://scholar.google.com/citations?user=ZQGcQqIAAAAJ&hl=en"
+           class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:border-gray-400 hover:text-gray-900 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          Google Scholar
+        </a>
+        <a href="https://digitalpig.github.io/blog"
+           class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:border-gray-400 hover:text-gray-900 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+          </svg>
+          Blog
+        </a>
+      </div>
+    </header>
 
-<h3>
-<a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Me</h3>
+    <main class="max-w-4xl mx-auto px-6 pb-24 space-y-20">
 
-<p>My education background is in Materials Science & Engineering. MSE is a big
-  bucket and contains subjects across many different fields. My thesis work is
-  about polymer based biomaterials (<a href="https://scholar.google.com/citations?user=ZQGcQqIAAAAJ&hl=en">Google Scholar</a>). After that, I worked in a specialty chemical company (<a href="https://www.lubrizol.com">Lubrizol</a>) developing rheology modifier. In my spare time, I like to work on programming to do some cool stuff. After a while, I fall in love with big data and machine learning.
-  So I decide to make a shift to my career. I joined Capital One as a Data Scientist in 2016.</p>
-
-<p>It's hard to categorize myself into one specific professions. I would call myself a hybrid <em>engi-scientist</em>.</p>
-
-<h3>
-<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature Projects</h3>
-
-<ul>
-  <li class="single"> <a href="https://smartunderwriter-e34cae0ad3d4.herokuapp.com">Smart Underwriter</a> </li>
-  <a href="images/underwriter.png">
-  <img src="images/underwriter.png" alt="SmartUnderwriter Screenshot" /> <br>
-</a>
-  This model is build on Fannie Mae's data from 2000 to 2012, downloaded from Fannie Mae Single Family Housing Data. The data was processed by Python with the help of numpy/scipy, pandas and scikit-learn. You can find the source code in my Github repo.
-  <li class="double"> <a href="https://nyc-bus-heroku18.herokuapp.com/">NYC Buses</a> </li>
-  <a href="images/bus.png">
-    <img src="images/bus.png" alt="NYC Bus Status" />
-  </a>
-  This website is part of the data incubator's data visualization miniproject. It has both static and live analysis of NYC bus status. The live analysis shows the location and name of buses currently running in NYC at this time. The website is made by numpy/scipy, pandas, Flask and LeafletJS.
-  <li class="double"> <a href="https://github.com/DigitalPig/GPC_Fit">GPC Fit</a> </li>
-  <a href="images/Peak_deconv.png">
-  <img src="images/Peak_deconv.png" alt="Peak deconvolution" /> <br>
-</a>
-  GPC (Gel Permeation Chromatography) is a widely used tool for polymer
-  scientist. It is a fast and easy way to separate molecules with different
-  molecular weights and calculate number-average, weight-average and
-  whatever-average molecular weights in a second. However, its separation is not
-  as efficient as High Performance Liquid Chromatography (HPLC), where peaks are
-  mostly separated apart. As a result, peak deconvolution is often used to give
-  a component-like view for an overlayed peaks in GPC. There are some commercial
-  software that can do this peak deconvolution (e.g. PeakFit). I made this open
-  source GPC peak deconvolution software. It is powered by Python, lmfit and matplotlib. The code is very premature at this stage. GUI/Web interface will be added in the future.
-</ul>
-
-<h3>
-<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h3>
-
-<p><a href="https://twitter.com/DigitalPig" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @DigitalPig</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
-<p>
-  <!-- Place this tag where you want the button to render. -->
-<a aria-label="Follow @digitalpig on GitHub" data-style="mega" href="https://github.com/digitalpig" class="github-button">Follow @digitalpig</a>
-</p>
-<p>
-<a href="https://www.linkedin.com/pub/zhenqing-li/5/b73/183" style="text-decoration:none;"><span style="font: 80% Arial,sans-serif; color:#0783B6;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Zhenqing Li's LinkedIn profile" style="vertical-align:middle;" border="0">&nbsp;View Zhenqing Li's profile</span></a>
-</p>
+      <!-- About -->
+      <section id="about">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">About</h2>
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+          <p>
+            I'm currently a <strong class="text-gray-900">Senior Applied Machine Learning Engineer at Shopify</strong>, where I build next-generation search models for Shopify storefronts and the Shop app using fine-tuned LLMs. I also developed an LLM-as-a-judge evaluation system to automate search quality assessment and reduce manual labeling overhead.
+          </p>
+          <p>
+            Before Shopify, I spent eight years at <strong class="text-gray-900">Capital One</strong>, growing from Principal Data Scientist to Senior Manager. I led teams across pricing strategy, causal inference, and risk modeling — work that guided a $1.5B credit portfolio, contributed $70M in incremental revenue, and helped prevent over $100M in potential quarterly losses.
+          </p>
+          <p>
+            My roots are in materials science — I hold a <strong class="text-gray-900">PhD from The Ohio State University</strong> and spent four years at Lubrizol as a research chemist, where I built statistical models to predict chemical toxicity and developed image processing tools — early applied ML work before I had a name for it. That scientific foundation shapes how I approach ML: methodical, experiment-driven, and skeptical of results that seem too good.
+          </p>
+          <p>
+            I like to call myself a hybrid <em>engi-scientist</em> — equally at home reasoning about causal identification, tuning an LLM eval pipeline, and explaining results to a business stakeholder.
+          </p>
+        </div>
       </section>
-    </div>
-    <footer>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">Experience</h2>
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute left-0 top-2 bottom-2 w-px bg-gray-100 ml-[5px]"></div>
+
+          <div class="space-y-10 pl-7">
+
+            <div class="relative">
+              <div class="absolute -left-7 top-1.5 w-3 h-3 rounded-full bg-indigo-500 ring-4 ring-white"></div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <div>
+                  <h3 class="font-semibold text-gray-900">Senior Applied Machine Learning Engineer</h3>
+                  <p class="text-indigo-600 text-sm font-medium mt-0.5">Shopify &mdash; Remote</p>
+                </div>
+                <span class="text-xs text-gray-400 font-medium shrink-0">Sep 2024 – Present</span>
+              </div>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-600 list-disc list-inside marker:text-gray-300">
+                <li>Built LLM-as-a-judge evaluation system to automate search quality assessment, improving relevance and reducing manual labeling costs</li>
+                <li>Building next-generation Shopify storefront and Shop search models using fine-tuned LLMs; leading experimentation, evaluation, and rollout</li>
+              </ul>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -left-7 top-1.5 w-3 h-3 rounded-full bg-indigo-400 ring-4 ring-white"></div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <div>
+                  <h3 class="font-semibold text-gray-900">Senior Manager, Data Science</h3>
+                  <p class="text-indigo-600 text-sm font-medium mt-0.5">Capital One &mdash; McLean, VA</p>
+                </div>
+                <span class="text-xs text-gray-400 font-medium shrink-0">Jan 2022 – Jun 2024</span>
+              </div>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-600 list-disc list-inside marker:text-gray-300">
+                <li>Led team designing causal models for customer management and pricing, guiding a $1.5B credit portfolio</li>
+                <li>Delivered LSTM-based risk model enabling interventions that reduced potential quarterly loss by $100M</li>
+                <li>Built causal model for credit utilization prediction, expanding program reach by 20%</li>
+              </ul>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -left-7 top-1.5 w-3 h-3 rounded-full bg-indigo-300 ring-4 ring-white"></div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <div>
+                  <h3 class="font-semibold text-gray-900">Manager, Data Science</h3>
+                  <p class="text-indigo-600 text-sm font-medium mt-0.5">Capital One &mdash; McLean, VA</p>
+                </div>
+                <span class="text-xs text-gray-400 font-medium shrink-0">Aug 2018 – Jan 2022</span>
+              </div>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-600 list-disc list-inside marker:text-gray-300">
+                <li>Developed pricing model contributing $70M in incremental revenue from credit line increases</li>
+                <li>Rebuilt transaction fraud model preventing $4M in additional fraud</li>
+                <li>Led challenger model development for Capital One's Main Street risk model</li>
+              </ul>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -left-7 top-1.5 w-3 h-3 rounded-full bg-gray-300 ring-4 ring-white"></div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <div>
+                  <h3 class="font-semibold text-gray-900">Principal Data Scientist</h3>
+                  <p class="text-indigo-600 text-sm font-medium mt-0.5">Capital One &mdash; McLean, VA</p>
+                </div>
+                <span class="text-xs text-gray-400 font-medium shrink-0">Sep 2016 – Aug 2018</span>
+              </div>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-600 list-disc list-inside marker:text-gray-300">
+                <li>Validated behavior, fraud, and recommendation models within the Model Risk Office</li>
+                <li>Built AWS-based data engineering pipelines for model validation workflows</li>
+              </ul>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -left-7 top-1.5 w-3 h-3 rounded-full bg-gray-200 ring-4 ring-white"></div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <div>
+                  <h3 class="font-semibold text-gray-900">Research Chemist</h3>
+                  <p class="text-indigo-600 text-sm font-medium mt-0.5">Lubrizol &mdash; Wickliffe, OH</p>
+                </div>
+                <span class="text-xs text-gray-400 font-medium shrink-0">Jun 2012 – Sep 2016</span>
+              </div>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-600 list-disc list-inside marker:text-gray-300">
+                <li>Built statistical model to predict chemical toxicity, avoiding $1M in regulatory registration costs</li>
+                <li>Applied Design of Experiments to accelerate new product development and developed rheology modifiers</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Languages &amp; Libraries</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md text-sm font-medium">Python</span>
+              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md text-sm font-medium">PyTorch</span>
+              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md text-sm font-medium">NumPy / SciPy</span>
+              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md text-sm font-medium">Pandas / Polars</span>
+              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md text-sm font-medium">Spark</span>
+              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md text-sm font-medium">SQL</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Infrastructure</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">AWS (EMR · S3 · SageMaker)</span>
+              <span class="px-2.5 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">Terraform</span>
+              <span class="px-2.5 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">Kubernetes</span>
+              <span class="px-2.5 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">Docker</span>
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">ML &amp; Statistics</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-green-50 text-green-700 rounded-md text-sm font-medium">LLMs &amp; Fine-tuning</span>
+              <span class="px-2.5 py-1 bg-green-50 text-green-700 rounded-md text-sm font-medium">Machine Learning</span>
+              <span class="px-2.5 py-1 bg-green-50 text-green-700 rounded-md text-sm font-medium">Causal Inference</span>
+              <span class="px-2.5 py-1 bg-green-50 text-green-700 rounded-md text-sm font-medium">Experimental Design</span>
+              <span class="px-2.5 py-1 bg-green-50 text-green-700 rounded-md text-sm font-medium">Statistical Modeling</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">Open Source Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+          <a href="https://smartunderwriter-e34cae0ad3d4.herokuapp.com"
+             class="group block border border-gray-200 rounded-xl p-5 hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-50 transition duration-200">
+            <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">Smart Underwriter</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">SVM model trained on Fannie Mae single-family data (2000–2015) to simulate automated underwriting system credit decisions.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">Python</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">scikit-learn</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">Heroku</span>
+            </div>
+          </a>
+
+          <a href="https://covid-19-testing-a18767ff85b0.herokuapp.com/"
+             class="group block border border-gray-200 rounded-xl p-5 hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-50 transition duration-200">
+            <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">COVID-19 Testing in US</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">Visualization app showing testing volume and positivity rates by state, pulling live data from the Covid Tracking Project.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">Python</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">Dash</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">Heroku</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/DigitalPig/GPC_Fit"
+             class="group block border border-gray-200 rounded-xl p-5 hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-50 transition duration-200">
+            <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">GPC Fit</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">Open-source peak deconvolution tool for Gel Permeation Chromatography data. Helps polymer scientists separate overlapping peaks.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">Python</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">lmfit</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">matplotlib</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">Education</h2>
+        <div class="space-y-4">
+          <div class="flex flex-wrap gap-x-6 gap-y-1">
+            <span class="text-sm text-gray-400 w-24 shrink-0 pt-0.5">2008 – 2012</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">PhD, Materials Science &amp; Engineering</p>
+              <p class="text-sm text-gray-500">The Ohio State University, Columbus, OH</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-x-6 gap-y-1">
+            <span class="text-sm text-gray-400 w-24 shrink-0 pt-0.5">2006 – 2008</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">MS, Materials Science &amp; Engineering</p>
+              <p class="text-sm text-gray-500">Clemson University, Clemson, SC</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-x-6 gap-y-1">
+            <span class="text-sm text-gray-400 w-24 shrink-0 pt-0.5">2002 – 2006</span>
+            <div>
+              <p class="font-medium text-gray-900 text-sm">BS, Macromolecular Science &amp; Engineering</p>
+              <p class="text-sm text-gray-500">Fudan University, Shanghai, China</p>
+            </div>
+          </div>
+        </div>
+        <p class="mt-5 text-sm text-gray-500">
+          Full publication list on
+          <a href="https://scholar.google.com/citations?user=ZQGcQqIAAAAJ&hl=en" class="text-indigo-600 hover:underline">Google Scholar</a>.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
+      <p>Hosted on <a href="https://pages.github.com" class="hover:text-gray-600 transition">GitHub Pages</a></p>
     </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
   </body>
 </html>
